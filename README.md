@@ -11,7 +11,7 @@ boundaries (IoU, boundary distance, baselines).
 | 2. DBSCAN irregular cultivable zones | **DBSCAN Analysis**, **Suitability** and **GIS Map** pages |
 | 3. Validate against terrace boundaries | **Evaluation** page (IoU, precision/recall, ARI, boundary distance, K-Means / hierarchical / threshold baselines) |
 
-## What is in version 2 (the six "professional" parts)
+## What is in version (the six "professional" parts)
 1. **DBSCAN analysis** – k-distance guidance, ε × MinPts comparison grid with ranked best combinations, core/border/noise points, cluster-wise mean ± std, per-cluster feature distributions.
 2. **GIS map** – Leaflet map (street/satellite basemap) with sensor points, coloured clusters, noise shown separately, irregular zone polygons, terrace outlines; offline schematic map as fallback.
 3. **Terrain suitability** – Potentially / Moderately / Less suitable per cluster from editable slope, moisture and elevation thresholds (limiting-factor rule).
