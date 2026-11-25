@@ -71,7 +71,7 @@ backend/app/             FastAPI routes, state, SQLite run log, PDF report
 frontend/src/            React pages + SVG map/charts (no heavy chart/map dependencies)
 ```
 
-## Honest limitations (say these in your report)
+## Honest limitations of this project
 * The Leaflet basemap needs internet and was written against the Leaflet 1.9 API but could not be run against the real package when this was built; the offline map and every other page were run in a browser. If the Leaflet map ever fails, the app falls back to the offline map automatically.
 * ARI compares cluster labels with the terrace each point lies in. On the demo data, DBSCAN *without* coordinates scores a higher ARI (≈0.81) than DBSCAN with coordinates (≈0.40), because adding coordinates splits the steep riser points into many small clusters. Report this honestly and discuss it.
 * The bundled dataset is **synthetic**. Its terraces come from the same model as the points, so the scores (IoU ≈ 0.79, mean boundary error ≈ 3.8 m)
@@ -82,3 +82,23 @@ frontend/src/            React pages + SVG map/charts (no heavy chart/map depend
 * The slope/moisture thresholds are agronomic assumptions – justify them with literature for your crop.
 * DEM / GeoTIFF raster ingestion is not included; sample rasters to CSV points instead.
 * The app keeps one dataset per server session (single-user, local use).
+
+## Project Deployment
+
+CultivaMap AI is deployed and publicly accessible through Render. The application provides an interactive platform for analyzing terrain characteristics and identifying potential cultivable zones in hilly regions using the DBSCAN clustering algorithm.
+
+The deployed application integrates a React frontend with a FastAPI backend, allowing users to upload terrain datasets, perform density-based clustering, visualize terrain patterns, identify noise points, and explore potential cultivation zones.
+
+**Live Application:** [https://cultivamap-ai.onrender.com](https://cultivamap-ai.onrender.com)
+
+**GitHub Repository:** [https://github.com/premsaivignesh/CultivaMap-AI](https://github.com/premsaivignesh/CultivaMap-AI)
+
+### Deployment Details
+- **Hosting Platform:** Render
+- **Deployment Method:** Docker
+- **Frontend:** React.js
+- **Backend:** Python FastAPI
+- **Machine Learning Algorithm:** DBSCAN (Density-Based Spatial Clustering of Applications with Noise)
+- **Version Control:** Git and GitHub
+
+The application is deployed as a live web service and can be accessed through the above link.
