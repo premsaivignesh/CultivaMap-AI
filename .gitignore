@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+node_modules/
+frontend/dist/
+backend/data/cultivamap.db
+backend/data/uploads/
+backend/outputs/
+.pytest_cache/
+.env
+.env.*
